@@ -124,7 +124,7 @@
 
 
 import React, { useState } from 'react';
-import './QueryPage.css'; // You'll need to create this CSS file for styling
+import './QueryPage.css';
 
 const QueryPage = () => {
   const [queryResults, setQueryResults] = useState([]);
@@ -145,7 +145,9 @@ const QueryPage = () => {
   }
 
   const handleSearch = () => {
-    setQuery(false);
+    if(currentQuery!=''){
+      setQuery(false);
+    }
     if (currentQuery.trim() !== '') {
       // Perform the search and get the result (you can replace this with your actual search logic)
       const searchResult = `Result for: ${currentQuery}`;
