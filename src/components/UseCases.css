@@ -47,6 +47,14 @@
   justify-content: center;
 }
 
+.suggestions{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 35%;
+
+}
+
 .card {
   border: 1px solid #ccc;
   border-radius: 5px;

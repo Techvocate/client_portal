@@ -172,10 +172,10 @@ const QueryPage = () => {
       <div className="main-panel">
       {query ? (
         <div className="suggestions">
-            <div className="card">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar etiam non quam lacus suspendisse. Cursus euismod quis viverra nibh cras. Tincidunt eget nullam non nisi est sit amet facilisis. Scelerisque felis imperdiet proin fermentum leo vel.</div>
-            <div className="card">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar etiam non quam lacus suspendisse. Cursus euismod quis viverra nibh cras. Tincidunt eget nullam non nisi est sit amet facilisis. Scelerisque felis imperdiet proin fermentum leo vel.</div>
-            <div className="card">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar etiam non quam lacus suspendisse. Cursus euismod quis viverra nibh cras. Tincidunt eget nullam non nisi est sit amet facilisis. Scelerisque felis imperdiet proin fermentum leo vel.</div>
-            <div className="card">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar etiam non quam lacus suspendisse. Cursus euismod quis viverra nibh cras. Tincidunt eget nullam non nisi est sit amet facilisis. Scelerisque felis imperdiet proin fermentum leo vel.</div>
+            <div className="card">Lorem ipsum dolor sit amet</div>
+            <div className="card">Lorem ipsum dolor sit amet</div>
+            <div className="card">Lorem ipsum dolor sit amet</div>
+            <div className="card">Lorem ipsum dolor sit amet</div>
         </div>) : null}
         {queryResults.map((queryResult, index) => (
           <div key={index} className="query-result">
