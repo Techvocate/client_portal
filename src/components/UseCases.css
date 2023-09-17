@@ -1,0 +1,88 @@
+/* Assuming you have a CSS file linked to your React component */
+
+.outer-div {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.inner-container {
+  width: 72%;
+  height: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  border: 2px solid #181818;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: auto; /* Allow inner-container to scroll */
+}
+
+.inner-container1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1; /* Allow inner-container1 to grow and fill available space */
+}
+
+.inner-container1-1 {
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.inner-container1-1p {
+  padding: 18px;
+  background-color: wheat;
+}
+
+.inner-container2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 200px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.search-bar {
+  width: 80%;
+  text-align: center;
+  margin-top: 10px;
+  margin: auto;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.button1 {
+  width: 10%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button1:hover {
+  background-color: #0056b3;
+}
