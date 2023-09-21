@@ -1,5 +1,5 @@
 import React from 'react'
-import gptlogo from '../assets/chatgpt.svg';
+import gptlogo from '../assets/integrity.png';
 import addBtn from '../assets/add-30.png';
 import msgIcon from '../assets/message.svg';
 import home from '../assets/home.svg';
