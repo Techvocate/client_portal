@@ -1,4 +1,4 @@
-.gpt-query-page {
+/* .gpt-query-page {
     height: 90vh;
     max-width: 80%;
     margin: auto;
@@ -50,12 +50,12 @@
     margin-bottom: 0;
   }
   .chat-input::-webkit-scrollbar {
-    width: 0; /* Remove scrollbar space */
-    background: transparent; /* Optional: make scrollbar invisible */
+    width: 0; 
+    background: transparent; 
   }
   .main-panel::-webkit-scrollbar {
-    width: 0; /* Remove scrollbar space */
-    background: transparent; /* Optional: make scrollbar invisible */
+    width: 0; 
+    background: transparent; 
   }
   
   .search-bar button {
@@ -89,7 +89,6 @@
     margin-bottom: 0; 
 }
 .suggestions {
-    /* margin-top: auto; */
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -113,4 +112,15 @@
   .card:hover {
     background-color: #e0e0e0;
   }
-  
+   */
+   .querypage{
+    margin: 0;
+    padding: 0;
+    color: white;
+    width: 100vw;
+    min-height:100vh ;
+    display: flex;
+    box-sizing: border-box;
+    background:rgb(3, 0, 31);
+    font-family: 'Poppins', sans-serif;
+}

@@ -1,0 +1,28 @@
+.main{
+    flex: 10;
+    min-height: calc(100vh-14rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem 10rem;
+}
+.chatFooter{
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inp{
+    padding: 0.5rem;
+    background: rgba(28,30,58,1);
+}
+.inp>input{
+    width: calc(100%-3rem);
+    outline: none;
+}
+.inp>input, .send{
+    border: none;
+    background: transparent;
+}
