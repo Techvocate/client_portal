@@ -2,17 +2,17 @@
 *{
     font-family: 'Poppins';
 }
-.navbar1 {
+/* .navbar1 {
     background-color: rgba(0, 0, 0, 0.1); 
     color: #fff;
-    /* padding: 1rem; */
+    padding: 1rem;
     position: absolute;
     backdrop-filter: blur(4px);
     top: 0;
     height: 14%;
     width: 100%;
     z-index: 2;
-  }
+  } */
   
   .navbar-container {
     display: flex;
@@ -29,8 +29,15 @@
     /* color: #E5D283; */
     margin-left: 60px;
   }
+
+  #title{
+    color: black;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  }
   
   .navbar-links {
+    
     list-style: none;
     padding: 0;
     display: flex;
@@ -42,6 +49,7 @@
   }
   
   .navbar-link {
+    color: black;
     margin: 0 0.5rem;
     cursor: pointer;
     /* padding: 20px; */

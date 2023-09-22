@@ -14,7 +14,7 @@ const HomePage = () => {
           Streamline
           <br /> Your Legal Processes
         </p>
-        <p className="sub-heading">Effortless Document Management</p>
+        {/* <p className="sub-heading">Effortless Document Management</p> */}
         <p className="description">
           Effortlessly generate, customize, and manage a wide range of legal
           documents tailored to your specific needs.
@@ -32,10 +32,10 @@ const HomePage = () => {
           </Link>
         </motion.div>
       </div>
-      <video autoPlay loop muted className="video-bg">
+      {/* <video autoPlay loop muted className="video-bg">
         <source src="\pexels_videos_1851190 (2160p).mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
     </div>
   );
 };
