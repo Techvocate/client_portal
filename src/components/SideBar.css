@@ -1,3 +1,7 @@
+*{
+    text-decoration: none;
+    color: white;
+}
 .sidebar{
     flex: 2;
     border-right: 1px solid rgb(100, 100, 100);
