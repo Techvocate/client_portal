@@ -6,6 +6,7 @@ import home from '../assets/home.svg';
 import saved from '../assets/bookmark.svg';
 import rocket from '../assets/rocket.svg';
 import './SideBar.css';
+import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   return (
@@ -25,7 +26,9 @@ const SideBar = () => {
         </div>
         <div className='lowerside'>
           <div className='lowerSide'>
+            <Link to="/" >
             <div className='listItems'><img src={home} alt='' className='listitemsImg'/>Home</div>
+            </Link>
             <div className='listItems'><img src={saved} alt='' className='listitemsImg'/>Downloads</div>
             <div className='listItems'><img src={rocket} alt='' className='listitemsImg'/>Legal Advice</div>
           </div>
