@@ -1,10 +1,10 @@
 import React from 'react'
 import gptlogo from '../assets/integrity.png';
 import addBtn from '../assets/add-30.png';
-import msgIcon from '../assets/message.svg';
-import home from '../assets/home.svg';
-import saved from '../assets/bookmark.svg';
-import rocket from '../assets/rocket.svg';
+import msgIcon from '../assets/chat.png';
+import home from '../assets/home.png';
+import saved from '../assets/bookmark.png';
+import rocket from '../assets/rocket.png';
 import './SideBar.css';
 import { Link } from 'react-router-dom';
 
