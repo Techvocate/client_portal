@@ -4,6 +4,7 @@
     position: relative;
     height: 100vh;
     z-index: 1;
+    background-color: #E3F4F4;
   }
   
   .video-bg {
@@ -29,25 +30,27 @@
     /* font-size: 2rem; */
     font-size: 55px;
     margin-bottom: 1rem;
-    color: #FBEEAC;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: black;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   }
   .description {
-    color: #fff;
+    color: black;
     font-size: 1.2rem;
     max-width: 600px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
     .sub-heading {
     font-size: 38px;
     margin-bottom: 1rem;
-    color: #fff;
+    color: black;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
   
   
   .try-now-button {
-    background-color: rgba(0, 0, 0, 0.1); 
+    background-color: black; 
     color: #fff;
     border: none;
     padding: 1rem 1.5rem;
@@ -55,7 +58,7 @@
     box-shadow: 2px;
     font-size: 1rem;
     cursor: pointer;
-    backdrop-filter: blur(4px);
+    
   }
 .app__profile-item{
   width: 190px;
