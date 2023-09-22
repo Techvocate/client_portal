@@ -65,12 +65,12 @@
   }
   
   .auth-button {
-    background-color: rgba(0, 0, 0, 0.4); 
-    color: #FBEEAC;
+    /* background-color: rgba(0, 0, 0, 0.4);  */
+    color: black;
     border: none;
     border-radius: 8px;
     padding: 0.5rem 1rem;
-    font-size: larger;
+    font-size: 24px;
     cursor: pointer;
     margin-left: 1rem; 
     backdrop-filter: blur(4px);

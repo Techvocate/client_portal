@@ -29,7 +29,7 @@
   .main-title {
     /* font-size: 2rem; */
     font-size: 55px;
-    margin-bottom: 1rem;
+    
     color: black;
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
     -webkit-text-stroke-width: 1px;
@@ -66,5 +66,5 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin: 2rem;
+  /* margin: 2rem; */
 }
