@@ -121,6 +121,6 @@
     min-height:100vh ;
     display: flex;
     box-sizing: border-box;
-    background:rgb(3, 0, 31);
+    background:#E3F4F4;
     font-family: 'Poppins', sans-serif;
 }

@@ -1,5 +1,5 @@
 .main{
-    background-color: black;
+    background-color: #C4DFDF;
     flex: 10;
     min-height: calc(100vh-14rem);
     display: flex;
@@ -25,6 +25,7 @@
 .chats {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
+    color: black;
 }
 
 .chat1{
@@ -34,6 +35,7 @@
     display: flex;
     align-items: flex-start;
     text-align: justify;
+    color: black;
 }
 
 .chatImg{
@@ -44,9 +46,10 @@
 }
 
 .bot{
-    background: rgba(28,30,58,1);
+    background: #E3F4F4;
     width: fit-content;
     border-radius: 0.5rem;
+    color: black;
 }
 
 .chatFooter{
@@ -59,7 +62,7 @@
 }
 .inp{
     padding: 0.5rem;
-    background: rgba(28,30,58,1);
+    background: #F8F6F4;
     display: flex;
     align-items: center;
     border-radius: 1rem;
@@ -69,7 +72,7 @@
     width: calc(100% - 3rem);
     outline: none;
     padding: 0.5rem;
-    color: white;
+    color: black;
 }
 .inp>input, .send{
     border: none;

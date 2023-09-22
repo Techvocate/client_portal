@@ -32,7 +32,7 @@ function QueryMain() {
             <img src={sendBtn} alt='send'/>
           </button>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+        <p style={{color:"black"}}>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
       </div>
     </div>
   )
