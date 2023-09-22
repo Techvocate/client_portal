@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/client_portal/querypage/static/css/main.80f5902d.css",
-    "main.js": "/client_portal/querypage/static/js/main.0bb5ed59.js",
-    "static/js/787.c4e7f8f9.chunk.js": "/client_portal/querypage/static/js/787.c4e7f8f9.chunk.js",
-    "static/media/integrity.png": "/client_portal/querypage/static/media/integrity.46ddfa0705bf1a265c7e.png",
-    "static/media/rocket.png": "/client_portal/querypage/static/media/rocket.005109b8ef22f17600c8.png",
-    "static/media/user.jpg": "/client_portal/querypage/static/media/user.418a3098114195278e81.jpg",
-    "static/media/home.png": "/client_portal/querypage/static/media/home.eafe224d4c515213d9d5.png",
-    "static/media/logo.svg": "/client_portal/querypage/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "static/media/send.svg": "/client_portal/querypage/static/media/send.5cc05986cf306ae5d4ce38bf6fdc3def.svg",
-    "index.html": "/client_portal/querypage/index.html",
-    "main.80f5902d.css.map": "/client_portal/querypage/static/css/main.80f5902d.css.map",
-    "main.0bb5ed59.js.map": "/client_portal/querypage/static/js/main.0bb5ed59.js.map",
-    "787.c4e7f8f9.chunk.js.map": "/client_portal/querypage/static/js/787.c4e7f8f9.chunk.js.map"
+    "main.css": "/client_portal/static/css/main.80f5902d.css",
+    "main.js": "/client_portal/static/js/main.d4dab3e3.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/client_portal/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/integrity.png": "/client_portal/static/media/integrity.46ddfa0705bf1a265c7e.png",
+    "static/media/rocket.png": "/client_portal/static/media/rocket.005109b8ef22f17600c8.png",
+    "static/media/user.jpg": "/client_portal/static/media/user.418a3098114195278e81.jpg",
+    "static/media/home.png": "/client_portal/static/media/home.eafe224d4c515213d9d5.png",
+    "static/media/logo.svg": "/client_portal/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/send.svg": "/client_portal/static/media/send.5cc05986cf306ae5d4ce38bf6fdc3def.svg",
+    "index.html": "/client_portal/index.html",
+    "main.80f5902d.css.map": "/client_portal/static/css/main.80f5902d.css.map",
+    "main.d4dab3e3.js.map": "/client_portal/static/js/main.d4dab3e3.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/client_portal/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.80f5902d.css",
-    "static/js/main.0bb5ed59.js"
+    "static/js/main.d4dab3e3.js"
   ]
 }
