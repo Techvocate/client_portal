@@ -32,7 +32,7 @@
     
     color: black;
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.9px;
   -webkit-text-stroke-color: black;
   }
   .description {
@@ -40,6 +40,8 @@
     font-size: 1.2rem;
     max-width: 600px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
   }
     .sub-heading {
     font-size: 38px;

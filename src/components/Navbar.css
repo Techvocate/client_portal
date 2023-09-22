@@ -32,7 +32,7 @@
 
   #title{
     color: black;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
   }
   
@@ -74,6 +74,8 @@
     cursor: pointer;
     margin-left: 1rem; 
     backdrop-filter: blur(4px);
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   }
   
   /* .auth-button:hover {
