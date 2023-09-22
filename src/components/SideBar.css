@@ -56,7 +56,9 @@
     height: 1.5rem;
 }
 .lowerSide{
-    padding:1.5rem;
+    /* padding:1.5rem; */
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 .listItems{
     margin: 0.5rem;
