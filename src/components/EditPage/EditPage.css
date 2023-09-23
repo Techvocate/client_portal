@@ -1,0 +1,11 @@
+.querypage{
+    margin: 0;
+    padding: 0;
+    color: white;
+    width: 100vw;
+    height:100vh ;
+    display: flex;
+    box-sizing: border-box;
+    background:#E3F4F4;
+    font-family: 'Poppins', sans-serif;
+}

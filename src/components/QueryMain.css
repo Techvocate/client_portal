@@ -36,6 +36,7 @@
     align-items: flex-start;
     text-align: justify;
     color: black;
+    position: relative;
 }
 
 .chatImg{
@@ -50,6 +51,37 @@
     width: fit-content;
     border-radius: 0.5rem;
     color: black;
+}
+.chatImg1{
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    /* margin-bottom: 1px; */
+}
+
+.edit__div{
+    background-color: #C4DFDF;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    position: absolute;
+    bottom: 5px; /* Shift it up by 5px */
+    right: 8px;
+}
+
+.edit{
+    width: 3rem;
+    font-size: 16px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden; 
+    
 }
 
 .chatFooter{

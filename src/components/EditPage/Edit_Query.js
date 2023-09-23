@@ -1,12 +1,11 @@
 import React from 'react';
-import './QueryMain.css';
-import sendBtn from '../assets/send.svg';
-import userIcon from '../assets/user.jpg';
-import gptImgLogo from '../assets/integrity.png';
-import keep from '../assets/keep.png';
-import { Link } from 'react-router-dom';
+import './Edit_Query.css';
+import sendBtn from '../../assets/send.svg';
+import userIcon from '../../assets/user.jpg';
+import gptImgLogo from '../../assets/integrity.png';
+import keep from '../../assets/keep.png';
 
-function QueryMain() {
+function Edit_Query() {
   return (
     <div className='main'>
       <div className='chats'>
@@ -33,12 +32,9 @@ function QueryMain() {
           <p className='txt'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum optio voluptate a error, ut libero cumque saepe velit, quis nam asperiores dolor? Minima quos cupiditate rerum obcaecati beatae quibusdam nobis. Mollitia, autem. Dicta laudantium nisi aliquam distinctio dolor vel cupiditate culpa animi quaerat, maiores deserunt. Exercitationem assumenda nobis, optio veniam, dolor neque ratione suscipit placeat ullam ipsum, quas modi. Enim sint earum dignissimos excepturi, libero fugiat labore neque, harum corporis cum fugit. Quia, vel corporis est laboriosam ipsam ducimus. Natus repudiandae dolorum harum dolore doloremque temporibus aliquam nostrum accusantium laboriosam numquam, impedit amet corporis consequatur vel labore vero minus.</p>
           <div className='edit__div'>
           <img className="chatImg1" src={keep} alt=''/>
-          <Link to="/editpage">
-          <button  className='edit'>
+            <button  className='edit'>
               Edit
             </button>
-          </Link>
-            
           </div>
         </div>
       </div>
@@ -55,4 +51,4 @@ function QueryMain() {
   )
 }
 
-export default QueryMain
+export default Edit_Query
