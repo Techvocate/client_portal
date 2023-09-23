@@ -1,7 +1,8 @@
 .signup-container {
     display: grid;
     place-items: center;
-    height: 80vh;
+    height: 100vh;
+    background-color: #f0f0f0;
   }
   
   .form-container {
@@ -21,23 +22,32 @@
   input[type="email"],
   input[type="password"],
   .but1 {
-    width: 100%;
+    margin-top: 10px;
+    width: 80%;
     padding: 10px;
+    border: 1px solid #ccc;
+  border-radius: 3px;
   }
   
   .but1 {
     background-color: #4287f5;
-    color: white;
-    border: none;
-    cursor: pointer;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
   }
   
   .login-link {
     margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
   }
   
   .login-link a {
     color: #4287f5;
+  text-decoration: none;
+  font-weight: bold;
   }
   
   

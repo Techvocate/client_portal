@@ -1,41 +1,57 @@
+/* Styling for Login Page */
 .login-container {
-    display: grid;
-    place-items: center;
-    height: 80vh;
-  }
-  
-  .form-container {
-    display: grid;
-    gap: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  h2 {
-    margin: 0;
-  }
-  
-  input[type="text"],
-  input[type="password"],
-  .but1 {
-    width: 100%;
-    padding: 10px;
-  }
-  
-  .but1 {
-    background-color: #4287f5;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .signup-link {
-    margin-top: 10px;
-  }
-  
-  .signup-link a {
-    color: #4287f5;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Background color for the whole page */
+}
+
+.form-container {
+  max-width: 400px; /* Adjust as needed for your form width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff; /* Background color for the form */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+h2 {
+  margin: 0;
+  color: #333; /* Text color for the heading */
+}
+
+input[type="text"],
+input[type="password"],
+.but1 {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px; /* Add some spacing between input elements */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.but1 {
+  background-color: #4287f5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.but1:hover {
+  background-color: #3366cc; /* Darker shade on hover */
+}
+
+.signup-link {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #666; /* Text color for the sign-up link */
+}
+
+.signup-link a {
+  color: #4287f5;
+  text-decoration: none;
+  font-weight: bold; /* Make the link bold */
+}
