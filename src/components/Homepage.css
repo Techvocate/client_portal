@@ -60,6 +60,8 @@
     box-shadow: 2px;
     font-size: 1rem;
     cursor: pointer;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
     
   }
 .app__profile-item{
