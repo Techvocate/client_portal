@@ -17,6 +17,7 @@
     width: 100%;
     max-width: 70rem;
     height: calc(100vh - 17rem);
+    word-break: break-word;
 }
 
 .chats::-webkit-scrollbar {
@@ -26,6 +27,7 @@
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
     color: black;
+    word-break: break-word;
 }
 
 .chat1{
@@ -37,7 +39,10 @@
     text-align: justify;
     color: black;
     position: relative;
+    word-break: break-word;
+    
 }
+
 
 .chatImg{
     object-fit: cover;
@@ -57,6 +62,10 @@
     height: 25px;
     padding: 4px;
     /* margin-bottom: 1px; */
+}
+
+.txt{
+    word-break: break-word;
 }
 
 .edit__div{
