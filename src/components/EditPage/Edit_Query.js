@@ -73,9 +73,9 @@ function Edit_Query() {
     Bright Bulb Pvt. Ltd.`
   );
 
-  // const handleEditClick = () => {
-  //   setIsEditing(true);
-  // }
+  const handleEditClick = () => {
+    setIsEditing(true);
+  }
 
   const handleSaveClick = () => {
     setIsEditing(false);
@@ -95,9 +95,8 @@ function Edit_Query() {
               className='txt1'
               value={text}
               onChange={handleChange}
-              onBlur={handleSaveClick} // Save when focus is lost
               autoFocus
-            />
+            /> 
           ) : (
             <div className='structuredText'>
               {text.split('\n').map((sentence, index) => (
@@ -106,10 +105,12 @@ function Edit_Query() {
             </div>
           )}
           {isEditing ? (
-            <button onClick={handleSaveClick}>Save</button>
-          ) : null}
+            <button className='edit_save' onClick={handleSaveClick}>Save</button>
+          ) : 
+          <button className='edit_save' onClick={handleEditClick}>Edit</button>}
         </div>
       </div>
+      <button className='downloadBtn'>Download</button>
     </div>
   )
 }
