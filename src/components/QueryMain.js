@@ -10,7 +10,6 @@ import { useState } from 'react';
 function QueryMain() {
   const [inputquery, setInputQuery] = useState('');
   const [query, setQuery] = useState('');
-  const [text, setText] = useState('');
   const [response, setResponse] = useState('');
   function handleQueryChange(e) {
     setInputQuery(e.target.value);
@@ -92,7 +91,7 @@ function QueryMain() {
         {response !== '' && <div className='chat1 bot'>
           <img className="chatImg" src={gptImgLogo} alt=''/>
           <div className='structuredText'>
-              {text.split('\n').map((sentence, index) => (
+              {response.split('\n').map((sentence, index) => (
                 <p key={index}>{sentence}</p>
               ))}
             </div>
