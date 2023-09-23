@@ -33,14 +33,13 @@
 .chat1{
     margin: 1rem;
     padding: 2rem 3rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     display: flex;
     align-items: flex-start;
     text-align: justify;
     color: black;
     position: relative;
     word-break: break-word;
-    
 }
 
 
@@ -53,7 +52,7 @@
 
 .bot{
     background: #E3F4F4;
-    width: fit-content;
+    width: 50rem;
     border-radius: 0.5rem;
     color: black;
 }
