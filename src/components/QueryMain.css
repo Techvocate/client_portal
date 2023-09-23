@@ -109,4 +109,5 @@
 .inp>input, .send{
     border: none;
     background: transparent;
+    cursor: pointer;
 }

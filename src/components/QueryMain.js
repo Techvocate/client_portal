@@ -8,8 +8,17 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 function QueryMain() {
-  const [text, setText] = useState(
-    `This Agreement ("Agreement") is made and entered into as of [Date], (the "Effective Date") by and between:
+  const [inputquery, setInputQuery] = useState('');
+  const [query, setQuery] = useState('');
+  const [text, setText] = useState('');
+  const [response, setResponse] = useState('');
+  function handleQueryChange(e) {
+    setInputQuery(e.target.value);
+  }
+  function handleQuerySubmit() {
+    setQuery(inputquery);
+    setInputQuery('');
+    setResponse(`This Agreement ("Agreement") is made and entered into as of [Date], (the "Effective Date") by and between:
 
     M/s Elite Electronics, a company incorporated under the laws of [Country], with its principal place of business at [Address] (hereinafter referred to as "Elite Electronics"), 
     
@@ -71,16 +80,16 @@ function QueryMain() {
     M/s Elite Electronics
     
     _________________________
-    Bright Bulb Pvt. Ltd.`
-  );
+    Bright Bulb Pvt. Ltd.`);
+  }
   return (
     <div className='main'>
       <div className='chats'>
         <div className='chat1'>
           <img className='chatImg' src={userIcon} alt=''/>
-          <p className='txt'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p className='txt'>{query}</p>
         </div>
-        <div className='chat1 bot'>
+        {response !== '' && <div className='chat1 bot'>
           <img className="chatImg" src={gptImgLogo} alt=''/>
           <div className='structuredText'>
               {text.split('\n').map((sentence, index) => (
@@ -95,8 +104,8 @@ function QueryMain() {
             </button>  
           </div>
           </Link>
-        </div>
-        <div className='chat1'>
+        </div>}
+        {/* <div className='chat1'>
           <img className='chatImg' src={userIcon} alt=''/>
           <p className='txt'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
@@ -115,12 +124,12 @@ function QueryMain() {
             </button>  
           </div>
           </Link>
-        </div>
+        </div> */}
       </div>
       <div className='chatFooter'>
         <div className='inp'>
-          <input placeholder='Type Your Query..'/>
-          <button className='send'>
+          <input placeholder='Type Your Query..' value={inputquery} onChange={handleQueryChange}/>
+          <button onClick={handleQuerySubmit} className='send'>
             <img src={sendBtn} alt='send'/>
           </button>
         </div>
