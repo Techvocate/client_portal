@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   return (
-    <div className='sidebar'>
+    <div className='sidebar1'>
         <div className='upperSide'>
             <div className='upperSideTop'>
                 <img src={gptlogo} alt='logo' className='logo'/>

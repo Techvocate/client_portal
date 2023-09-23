@@ -67,7 +67,7 @@
     height: 30px;
     display: flex;
     flex-direction: row;
-    padding: 3px;
+    /* padding: 3px; */
     position: absolute;
     bottom: 5px; /* Shift it up by 5px */
     right: 8px;
