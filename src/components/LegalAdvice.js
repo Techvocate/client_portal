@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
-const HomePage = () => {
+const LegalAdvice = () => {
   
   return (
     <div className="home-page">
@@ -29,4 +29,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default LegalAdvice;

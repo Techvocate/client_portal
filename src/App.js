@@ -21,6 +21,7 @@ function App() {
           <Route path="/editpage" element={<EditPage/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/login" element={<LoginPage/>}/>
+          <Route path='/legaladvice'/>
         </Routes>
         </UserContextProvider>
       </Router>
