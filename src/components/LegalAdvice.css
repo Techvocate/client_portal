@@ -1,0 +1,95 @@
+/* src/components/Navbar.css */
+* {
+    font-family: "Poppins";
+  }
+  /* .navbar1 {
+      background-color: rgba(0, 0, 0, 0.1); 
+      color: #fff;
+      padding: 1rem;
+      position: absolute;
+      backdrop-filter: blur(4px);
+      top: 0;
+      height: 14%;
+      width: 100%;
+      z-index: 2;
+    } */
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 38px;
+    /* font-size: 1.5rem; */
+    /* color: #E5D283; */
+    margin-left: 60px;
+  }
+  
+  #title {
+    color: black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-right: 30%;
+    gap: 20px;
+    /* color: #E5D283; */
+    font-size: larger;
+    justify-content: center; /* Center the list */
+  }
+  
+  .navbar-link {
+    color: black;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    -webkit-text-stroke-width: 0.4px;
+    /* padding: 20px; */
+  }
+  
+  .navbar-link:hover {
+    color: rgb(26, 143, 84);
+    -webkit-text-stroke-width: 1px;
+    /* -webkit-text-stroke-color: black; */
+    text-decoration: none;
+    flex-direction: column;
+  
+    font-weight: 500;
+  
+    transition: all 0.4s ease-in-out;
+  }
+  .navbar-auth {
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .auth-button {
+    /* background-color: rgba(0, 0, 0, 0.4);  */
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 1rem;
+    backdrop-filter: blur(4px);
+    font-weight: 200;
+    -webkit-text-stroke-width: 0.6px;
+    text-decoration: none;
+    /* -webkit-text-stroke-color: black; */
+  }
+  
+  .auth-button:hover {
+    color: rgb(26, 143, 84); 
+    transition: all 0.4s ease-in-out;
+    }
+  
