@@ -1,12 +1,11 @@
 /* src/components/HomePage.css */
-*{
-  cursor: none;
-}
+
 .home-page {
     position: relative;
     height: 100vh;
     z-index: 1;
     background-color: #E3F4F4;
+    cursor: none;
   }
   
 .cursor{

@@ -1,7 +1,4 @@
-/* Styling for Login Page */
-*{
-  cursor: pointer;
-}
+
 .login-container {
   display: flex;
   justify-content: center;
