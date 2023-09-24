@@ -32,7 +32,7 @@ const Navbar = () => {
             <p id='title'>LegalEase</p>
         </div>
         <ul className="navbar-links">
-          <li className="navbar-link">Home</li>
+          <Link to={'/'}><li className="navbar-link">Home</li></Link>
           <Link to={'/legaladvice'}><li className="navbar-link">Legal Advice</li></Link>
           <li className="navbar-link">About</li>
           {/* <li className="navbar-link">UseCases</li> */}
