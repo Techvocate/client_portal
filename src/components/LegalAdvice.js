@@ -13,14 +13,13 @@ const LegalAdvice = () => {
       <Navbar/>
       <div className="content">
         <p className="main-title">
-          Streamline
-          <br /> Your Legal Processes
+          Legal Advice
+          <br />
         </p>
-        {/* <p className="sub-heading">Effortless Document Management</p> */}
-        <p className="description">
-          Effortlessly generate, customize, and manage a wide range of legal
-          documents tailored to your specific needs.
-        </p>
+        <p className="sub-heading">Resolve the Complex Issues With  Legal Advice</p>
+        {/* <p className="description">
+        
+        </p> */}
       </div>
       {/* <video autoPlay loop muted className="video-bg">
         <source src="\pexels_videos_1851190 (2160p).mp4" type="video/mp4" />
