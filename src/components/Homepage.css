@@ -1,5 +1,7 @@
 /* src/components/HomePage.css */
-
+*{
+  cursor: none;
+}
 .home-page {
     position: relative;
     height: 100vh;
@@ -7,6 +9,17 @@
     background-color: #E3F4F4;
   }
   
+.cursor{
+  background-color: #C4DFDF;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
   .video-bg {
     object-fit: cover;
     position: absolute;
@@ -32,7 +45,7 @@
     
     color: black;
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
-    -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-width: 1.8px;
   -webkit-text-stroke-color: black;
   }
   .description {
@@ -40,7 +53,7 @@
     font-size: 1.2rem;
     max-width: 600px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-width: 1.3px;
   -webkit-text-stroke-color: black;
   }
     .sub-heading {

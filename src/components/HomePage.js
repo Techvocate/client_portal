@@ -1,21 +1,68 @@
 // src/components/HomePage.js
 import "./Homepage.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const HomePage = () => {
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y:0
+  });
+  const [cursorVariant, setCursorVariant] = useState("default")
+
+
+  useEffect(() => {
+    const mouseMove = e => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY
+      })
+    }
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return()=>{
+      window.removeEventListener("mousemove",mouseMove);
+    }
+
+  }, []);
+
+  const variants = {
+    default:{
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16
+    },
+    text:{
+      height: 150,
+      width: 150,
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      backgroundColor: "rgb(140, 194, 184)",
+      // mixBlendMode: "difference"
+    }
+  }
+
+  const textEnter = () => setCursorVariant("text");
+  const textLeave = () => setCursorVariant("default");
+  
+
+
   return (
     <div className="home-page">
       <Navbar/>
+      <motion.div className="cursor"
+      variants={variants}
+      animate={cursorVariant}
+      />
       <div className="content">
-        <p className="main-title">
+        <p onMouseEnter={textEnter} onMouseLeave={textLeave} className="main-title">
           Streamline
           <br /> Your Legal Processes
         </p>
         {/* <p className="sub-heading">Effortless Document Management</p> */}
-        <p className="description">
+        <p onMouseEnter={textEnter} onMouseLeave={textLeave} className="description">
           Effortlessly generate, customize, and manage a wide range of legal
           documents tailored to your specific needs.
         </p>

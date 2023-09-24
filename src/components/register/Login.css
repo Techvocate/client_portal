@@ -1,17 +1,22 @@
 /* Styling for Login Page */
+*{
+  cursor: pointer;
+}
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0; /* Background color for the whole page */
+  background-color: #C4DFDF; /* Background color for the whole page */
 }
 
 .form-container {
-  max-width: 400px; /* Adjust as needed for your form width */
+  font-family: "Poppins";
+  max-width: 400px;
+  height: 400px; /* Adjust as needed for your form width */
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 50px;
   background-color: #ffffff; /* Background color for the form */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
@@ -28,7 +33,8 @@ input[type="password"],
   padding: 10px;
   margin-top: 10px; /* Add some spacing between input elements */
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 15px;
+  background-color: #CDF4F4;
 }
 
 .but1 {
