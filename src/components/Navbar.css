@@ -51,6 +51,7 @@
   color: black;
   margin: 0 0.5rem;
   cursor: pointer;
+  -webkit-text-stroke-width: 0.4px;
   /* padding: 20px; */
 }
 
@@ -81,7 +82,9 @@
   cursor: pointer;
   margin-left: 1rem;
   backdrop-filter: blur(4px);
-  -webkit-text-stroke-width: 1px;
+  font-weight: 200;
+  -webkit-text-stroke-width: 0.6px;
+  text-decoration: none;
   /* -webkit-text-stroke-color: black; */
 }
 
