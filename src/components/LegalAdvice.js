@@ -3,7 +3,8 @@ import "./Homepage.css";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Navbar from "./LegalAdvice.css";
+import Navbar from "./Navbar";
+import "./LegalAdvice.css";
 
 const LegalAdvice = () => {
   
