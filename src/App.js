@@ -7,6 +7,7 @@ import QueryPage from './components/QueryPage';
 import EditPage from './components/EditPage/EditPage';
 import Signup from './components/register/Signup';
 import LoginPage from './components/register/Login';
+import LegalAdvice from './components/LegalAdvice';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { UserContextProvider } from './UserContext';
 
@@ -21,7 +22,7 @@ function App() {
           <Route path="/editpage" element={<EditPage/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/login" element={<LoginPage/>}/>
-          <Route path='/legaladvice'/>
+          <Route path='/legaladvice' element={<LegalAdvice/>}/>
         </Routes>
         </UserContextProvider>
       </Router>
