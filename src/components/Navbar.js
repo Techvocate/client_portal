@@ -1,30 +1,30 @@
 import React from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-import { useEffect,useContext} from 'react';
-import {UserContext} from "../UserContext";
+// import { useEffect,useContext} from 'react';
+// import {UserContext} from "../UserContext";
 
 const Navbar = () => {
-  const {setUserInfo,userInfo} = useContext(UserContext);
-  useEffect(() => {
-    fetch('http://localhost:4000/profile', {
-      credentials: 'include',
-    }).then(response => {
-      response.json().then(userInfo => {
-        setUserInfo(userInfo);
-      });
-    });
-  }, []);
+  // const {setUserInfo,userInfo} = useContext(UserContext);
+  // useEffect(() => {
+  //   fetch('http://localhost:4000/profile', {
+  //     credentials: 'include',
+  //   }).then(response => {
+  //     response.json().then(userInfo => {
+  //       setUserInfo(userInfo);
+  //     });
+  //   });
+  // }, []);
 
-  function logout() {
-    fetch('http://localhost:4000/logout', {
-      credentials: 'include',
-      method: 'POST',
-    });
-    setUserInfo(null);
-  }
+  // function logout() {
+  //   fetch('http://localhost:4000/logout', {
+  //     credentials: 'include',
+  //     method: 'POST',
+  //   });
+  //   setUserInfo(null);
+  // }
 
-  const username = userInfo?.username;
+  // const username = userInfo?.username;
   return (
     <nav className="navbar1">
       <div className="navbar-container">
@@ -45,7 +45,7 @@ const Navbar = () => {
           <Link to={'/profile'}><button className="auth-button">{username}</button></Link>
           <button className="auth-button" onClick={logout}>Logout</button>
         </div>} */}
-        {username && (
+        {/* {username && (
           <div className='navbar-auth'>
               <div>{username}</div>
               <div><Link className='auth-button' onClick={logout}>Logout</Link></div>
@@ -56,7 +56,7 @@ const Navbar = () => {
             <div eventKey={2}><Link className='auth-button' to={'/login'}>Login</Link></div>
             <div eventKey={2}><Link className='auth-button' to={'/signup'}>Signup</Link></div>
           </div>
-        )}
+        )} */}
       </div>
     </nav>
   );
