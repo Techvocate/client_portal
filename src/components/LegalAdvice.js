@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-// src/components/LegalAdvice.js
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import "./LegalAdvice.css";
-import { Link } from "react-router-dom";
-=======
+
 // src/components/HomePage.js
 import "./LegalAdvice.css";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
->>>>>>> 5f1941135c0923dd95366dac2031baef13546cd3
+
 
 const LegalAdvice = () => {
   const [selectedOption, setSelectedOption] = useState(null);
