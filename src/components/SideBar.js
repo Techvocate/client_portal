@@ -14,7 +14,7 @@ const SideBar = () => {
         <div className='upperSide'>
             <div className='upperSideTop'>
                 <img src={gptlogo} alt='logo' className='logo'/>
-                <span className='brand'>LegalEase</span>
+                <Link to={'/'}><span className='brand'>LegalEase</span></Link>
             </div>
             <button className='midBtn'><img src={addBtn} alt='' className='addBtn'/>New Chat</button>
             <div className='upperSideBottom'>

@@ -1,11 +1,24 @@
-// src/components/HomePage.js
 import "./Homepage.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
+import BIRDS from 'vanta/dist/vanta.clouds.min'
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const HomePage = () => {
+  const [vantaEffect, setVantaEffect] = useState(null)
+  const myRef = useRef(null)
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(BIRDS({
+        el: myRef.current
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
+
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y:0
@@ -50,7 +63,7 @@ const HomePage = () => {
 
 
   return (
-    <div className="home-page">
+    <div className="home-page" ref={myRef}>
       <Navbar/>
       <motion.div className="cursor"
       variants={variants}

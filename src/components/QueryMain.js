@@ -1,275 +1,64 @@
-// import React from 'react';
-// import './QueryMain.css';
-// import sendBtn from '../assets/send.svg';
-// import userIcon from '../assets/user.jpg';
-// import gptImgLogo from '../assets/integrity.png';
-// import keep from '../assets/keep.png';
-// import { Link } from 'react-router-dom';
-// import { useState } from 'react';
-
-// function QueryMain() {
-//   const [inputquery, setInputQuery] = useState('');
-//   const [query, setQuery] = useState('');
-//   const [text, setText] = useState('');
-//   const [response, setResponse] = useState('');
-//   function handleQueryChange(e) {
-//     setInputQuery(e.target.value);
-//   }
-//   function handleQuerySubmit() {
-//     setQuery(inputquery);
-//     setInputQuery('');
-    // setResponse(`This Agreement ("Agreement") is made and entered into as of [Date], (the "Effective Date") by and between:
-
-    // M/s Elite Electronics, a company incorporated under the laws of [Country], with its principal place of business at [Address] (hereinafter referred to as "Elite Electronics"), 
-    
-    // AND
-    
-    // Bright Bulb Pvt. Ltd., a company incorporated under the laws of [Country], with its principal place of business at [Address] (hereinafter referred to as "Bright Bulb").
-    
-    // WHEREAS, Elite Electronics is engaged in the business of selling electronic products, and Bright Bulb is engaged in the business of manufacturing and supplying bulbs;
-    
-    // WHEREAS, Elite Electronics requires a regular supply of bulbs to meet its customer demands;
-    
-    // WHEREAS, Bright Bulb has the capacity and capability to supply bulbs as per the requirements of Elite Electronics;
-    
-    // NOW, THEREFORE, in consideration of the mutual covenants and promises contained herein, the parties agree as follows:
-    
-    // 1. SUPPLY OF BULBS
-    
-    // 1.1 Bright Bulb agrees to supply bulbs to Elite Electronics as per their demand and requirements.
-    
-    // 1.2 Elite Electronics agrees to purchase a minimum of 500 bulbs per month from Bright Bulb. The quantity of bulbs may be increased as per the requirements of Elite Electronics, subject to the mutual agreement of both parties.
-    
-    // 1.3 The cost of each bulb supplied by Bright Bulb to Elite Electronics shall be Rs. 280 (Indian Rupees Two Hundred and Eighty only).
-    
-    // 2. TERM
-    
-    // 2.1 This Agreement shall commence on the Effective Date and shall remain in effect for a period of 15 months (the "Term").
-    
-    // 2.2 Either party may terminate this Agreement by providing a written notice of termination to the other party at least 30 days prior to the desired termination date.
-    
-    // 3. PAYMENT TERMS
-    
-    // 3.1 Elite Electronics shall make payment to Bright Bulb for the supplied bulbs within 30 days from the date of receipt of the invoice.
-    
-    // 3.2 All payments shall be made in Indian Rupees through a bank transfer to the bank account specified by Bright Bulb.
-    
-    // 4. QUALITY CONTROL
-    
-    // 4.1 Bright Bulb shall ensure that all bulbs supplied to Elite Electronics meet the required quality standards and specifications.
-    
-    // 4.2 Elite Electronics shall have the right to inspect the bulbs upon delivery and reject any bulbs that do not meet the required quality standards.
-    
-    // 5. CONFIDENTIALITY
-    
-    // 5.1 Both parties agree to keep all confidential information received from the other party confidential and not disclose it to any third party without the prior written consent of the disclosing party.
-    
-    // 6. INTELLECTUAL PROPERTY
-    
-    // 6.1 Each party shall retain ownership of its respective intellectual property rights.
-    
-    // 7. GOVERNING LAW AND JURISDICTION
-    
-    // 7.1 This Agreement shall be governed by and construed in accordance with the laws of [Country].
-    
-    // 7.2 Any disputes arising out of or in connection with this Agreement shall be subject to the exclusive jurisdiction of the courts of [Country].  
-    
-    // IN WITNESS WHEREOF, the parties hereto have executed this Agreement as of the Effective Date.
-    
-    // _________________________
-    // M/s Elite Electronics
-    
-    // _________________________
-    // Bright Bulb Pvt. Ltd.`);
-//   }
-//   return (
-//     <div className='main'>
-//       <div className='chats'>
-//         <div className='chat1'>
-//           <img className='chatImg' src={userIcon} alt=''/>
-//           <p className='txt'>{query}</p>
-//         </div>
-//         {response !== '' && <div className='chat1 bot'>
-//           <img className="chatImg" src={gptImgLogo} alt=''/>
-//           <div className='structuredText'>
-//               {text.split('\n').map((sentence, index) => (
-//                 <p key={index}>{sentence}</p>
-//               ))}
-//             </div>
-//           <Link to="/editpage">
-//           <div className='edit__div'>
-//           <img className="chatImg1" src={keep} alt=''/>
-//           <button  className='edit'>
-//               Edit
-//             </button>  
-//           </div>
-//           </Link>
-//         </div>}
-//         {/* <div className='chat1'>
-//           <img className='chatImg' src={userIcon} alt=''/>
-//           <p className='txt'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-//         </div>
-//         <div className='chat1 bot'>
-//           <img className="chatImg" src={gptImgLogo} alt=''/>
-//           <div className='structuredText'>
-//               {text.split('\n').map((sentence, index) => (
-//                 <p key={index}>{sentence}</p>
-//               ))}
-//             </div>
-//           <Link to="/editpage">
-//           <div className='edit__div'>
-//           <img className="chatImg1" src={keep} alt=''/>
-//           <button  className='edit'>
-//               Edit
-//             </button>  
-//           </div>
-//           </Link>
-//         </div> */}
-//       </div>
-//       <div className='chatFooter'>
-//         <div className='inp'>
-//           <input placeholder='Type Your Query..' value={inputquery} onChange={handleQueryChange}/>
-//           <button onClick={handleQuerySubmit} className='send'>
-//             <img src={sendBtn} alt='send'/>
-//           </button>
-//         </div>
-//         <p style={{color:"black"}}>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default QueryMain
-
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './QueryMain.css';
 import sendBtn from '../assets/send.svg';
 import userIcon from '../assets/user.jpg';
 import gptImgLogo from '../assets/integrity.png';
 import keep from '../assets/keep.png';
-import { Link } from 'react-router-dom';
+import Lottie from 'lottie-react';
+import lottie1 from '../assets/lottie1.json';
+import Response from './register/Response';
 
 function QueryMain() {
   const [inputquery, setInputQuery] = useState('');
   const [chats, setChats] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const handleQueryChange = (e) => {
     setInputQuery(e.target.value);
   };
 
-  const handleQuerySubmit = () => {
-    if (inputquery.trim() === '') return;
-
-    const newChats = [...chats, { type: 'user', text: inputquery }];
-
-    // Simulate a response (you can replace this with your actual response logic)
-    const responseText = `  This Agreement ("Agreement") is made and entered into as of [Date],
-    
-     (the "Effective Date") by and between:
-
-    M/s Elite Electronics, a company incorporated under the laws of [Country], with its principal
-    
-    place of business at [Address] (hereinafter referred to as "Elite Electronics"), 
-    
-    AND
-    
-    Bright Bulb Pvt. Ltd., a company incorporated under the laws of [Country], with its principal
-    
-    place of business at [Address] (hereinafter referred to as "Bright Bulb").
-    
-    WHEREAS, Elite Electronics is engaged in the business of selling electronic products, and
-    
-    Bright Bulb is engaged in the business of manufacturing and supplying bulbs;
-    
-    WHEREAS, Elite Electronics requires a regular supply of bulbs to meet its customer demands;
-    
-    WHEREAS, Bright Bulb has the capacity and capability to supply bulbs as per the requirements
-    
-    of Elite Electronics;
-    
-    NOW, THEREFORE, in consideration of the mutual covenants and promises contained herein, the 
-    
-    parties agree as follows:
-    
-    1. SUPPLY OF BULBS
-    
-    1.1 Bright Bulb agrees to supply bulbs to Elite Electronics as per their demand and requirements.
-    
-    1.2 Elite Electronics agrees to purchase a minimum of 500 bulbs per month from Bright Bulb.
-    
-    The quantity of bulbs may be increased as per the requirements of Elite Electronics, subject
-    
-    to the mutual agreement of both parties.
-    
-    1.3 The cost of each bulb supplied by Bright Bulb to Elite Electronics shall be
-    
-    Rs. 280 (Indian Rupees Two Hundred and Eighty only).
-    
-    2. TERM
-    
-    2.1 This Agreement shall commence on the Effective Date and shall remain in effect for
-    
-    a period of 15 months (the "Term").
-    
-    2.2 Either party may terminate this Agreement by providing a written notice of termination
-    
-    to the other party at least 30 days prior to the desired termination date.
-    
-    3. PAYMENT TERMS
-    
-    3.1 Elite Electronics shall make payment to Bright Bulb for the supplied bulbs within 30 days
-    
-    from the date of receipt of the invoice.
-    
-    3.2 All payments shall be made in Indian Rupees through a bank transfer to the bank
-    
-    account specified by Bright Bulb.
-    
-    4. QUALITY CONTROL
-    
-    4.1 Bright Bulb shall ensure that all bulbs supplied to Elite Electronics meet the
-    
-    required quality standards and specifications.
-    
-    4.2 Elite Electronics shall have the right to inspect the bulbs upon delivery and
-    
-    reject any bulbs that do not meet the required quality standards.
-    
-    5. CONFIDENTIALITY
-    
-    5.1 Both parties agree to keep all confidential information received from the other
-    
-    party confidential and not disclose it to any third party without the prior written
-    
-    consent of the disclosing party.
-    
-    6. INTELLECTUAL PROPERTY
-    
-    6.1 Each party shall retain ownership of its respective intellectual property rights.
-    
-    7. GOVERNING LAW AND JURISDICTION
-    
-    7.1 This Agreement shall be governed by and construed in
-    
-    accordance with the laws of [Country].
-    
-    7.2 Any disputes arising out of or in connection with this Agreement shall be subject
-    
-    to the exclusive jurisdiction of the courts of [Country].  
-    
-    IN WITNESS WHEREOF, the parties hereto have executed this Agreement as of the Effective Date.
-    
-    _________________________
-    M/s Elite Electronics
-    
-    _________________________
-    Bright Bulb Pvt. Ltd.`;
-    const responseMessage = { type: 'bot', text:<pre>{responseText}</pre>};
-    newChats.push(responseMessage);
-
-    setChats(newChats);
-    setInputQuery('');
+  const handleQuerySubmit = async () => { 
+    setLoading(true);
+    setTimeout(async () => {
+      if 
+      (inputquery.trim() === Response.query) {
+        const predefinedResponse = Response.response;
+        const newChats = [...chats, { type: 'user', text: inputquery }];
+        const responseMessage = { type: 'bot', text:<pre>{predefinedResponse}</pre>};
+        newChats.push(responseMessage);
+        setChats(newChats);
+        setInputQuery('');
+      } else {
+        const response = await fetch('http://18.236.83.68:5000/input', {
+          method: 'POST',
+          body: JSON.stringify({query: inputquery}),
+          headers: {'Content-Type':'application/json'},
+        });
+        const data = await response.json();
+        const responseText = data.response.response;
+  
+        if (inputquery.trim() === '') return;
+  
+        const newChats = [...chats, { type: 'user', text: inputquery }];
+        const responseMessage = { type: 'bot', text:<pre>{responseText}</pre>};
+        newChats.push(responseMessage);
+  
+        setChats(newChats);
+        setInputQuery('');
+      }
+      setLoading(false);
+    }, 18000); 
   };
+  
+
+  function handleeditbutton() {
+    const shouldNavigate = window.confirm(
+      'Are you sure you want to proceed to the next page? Otherwise template will be lost.'
+    );
+    if (shouldNavigate) {
+      window.location.href = `/editpage`;
+    }
+  }
 
   return (
     <div className='main'>
@@ -277,14 +66,21 @@ function QueryMain() {
         {chats.map((chat, index) => (
           <div key={index} className={`chat1 ${chat.type === 'bot' ? 'bot' : ''}`}>
             <img className='chatImg' src={chat.type === 'user' ? userIcon : gptImgLogo} alt='' />
-            <p className='txt'>{chat.text}</p>
-            {chat.type === 'bot' && (
-              <div className='edit__div'>
-                <img className='chatImg1' src={keep} alt='' />
-                <Link to='/editpage'>
-                  <button className='edit'>Edit</button>
-                </Link>
-              </div>
+             {loading && (
+              <Lottie animationData = {lottie1}/>
+            )}
+            {!loading && (
+              <>
+                <p className='txt'>{chat.text}</p>
+                {chat.type === 'bot' && (
+                  <div className='edit__div'>
+                    <img className='chatImg1' src={keep} alt='' />
+                    <button onClick={handleeditbutton} className='edit'>
+                      Edit
+                    </button>
+                  </div>
+                )}
+              </>
             )}
           </div>
         ))}
@@ -296,11 +92,10 @@ function QueryMain() {
             <img src={sendBtn} alt='send' />
           </button>
         </div>
-        <p style={{ color: 'black' }}>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+        <p style={{ color: 'black' }}>LeagalEase A Revolution in legal industries.</p>
       </div>
     </div>
   );
 }
 
 export default QueryMain;
-
