@@ -1,6 +1,14 @@
 .sidebar{
     flex: 1;
+    background-color: rgb(63, 62, 62);
+    filter: blur(4px);
     border-right: 1px solid rgb(100, 100, 100);
+    box-shadow: 12px 12px 15px rgb(135, 132, 132);
+    
+}
+.sidebar1:hover{
+    filter: none;
+    
 }
 .logo{
     margin-right: 1rem;

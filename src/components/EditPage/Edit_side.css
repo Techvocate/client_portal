@@ -1,6 +1,10 @@
 .sidebar1{
     flex: 2;
     border-right: 1px solid rgb(100, 100, 100);
+    background-color: rgb(63, 62, 62);
+    
+    border-right: 1px solid rgb(100, 100, 100);
+    box-shadow: 12px 12px 15px rgb(135, 132, 132);
 }
 .logo{
     margin-right: 1rem;
@@ -9,7 +13,7 @@
 }
 .brand{
     font-size: 1.5rem;
-    color: black;
+    color: white;
 }
 .upperSide{
     padding: 2rem;
@@ -43,7 +47,7 @@
     display: flex;
     align-items: center;
     background: transparent;
-    color: black;
+    color: white;
     padding: 1rem;
     width: 18rem;
     margin: 1rem auto;
@@ -65,7 +69,7 @@
     display: flex;
     align-items: center;
     font-size: 1rem;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 .listitemsImg{

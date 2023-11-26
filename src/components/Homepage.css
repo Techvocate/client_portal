@@ -5,10 +5,11 @@
     height: 100vh;
     z-index: 1;
     background-color: #E3F4F4;
-    cursor: none;
+    
+    /* cursor: none; */
   }
   
-.cursor{
+/* .cursor{
   background-color: #C4DFDF;
   height: 32px;
   width: 32px;
@@ -17,7 +18,7 @@
   top: 0;
   left: 0;
   pointer-events: none;
-}
+} */
 
   .video-bg {
     object-fit: cover;
@@ -41,24 +42,24 @@
   .main-title {
     /* font-size: 2rem; */
     font-size: 55px;
-    
-    color: black;
+    font-weight: 700;
+    color: rgb(53, 52, 52);
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
     -webkit-text-stroke-width: 1.8px;
-  -webkit-text-stroke-color: black;
+  /* -webkit-text-stroke-color: rgb(75, 73, 73); */
   }
   .description {
-    color: black;
+    color: rgb(53, 52, 52);
     font-size: 1.2rem;
     max-width: 600px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     -webkit-text-stroke-width: 1.3px;
-  -webkit-text-stroke-color: black;
+  /* -webkit-text-stroke-color: black; */
   }
     .sub-heading {
     font-size: 38px;
     margin-bottom: 1rem;
-    color: black;
+    color: rgb(53, 52, 52);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
   

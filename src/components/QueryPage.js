@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './QueryPage.css';
 import SideBar from './SideBar';
 import QueryMain from './QueryMain';

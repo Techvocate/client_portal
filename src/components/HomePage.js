@@ -1,6 +1,6 @@
 import "./Homepage.css";
 import React, { useEffect, useState,useRef } from "react";
-import BIRDS from 'vanta/dist/vanta.clouds.min'
+import BIRDS from 'vanta/dist/vanta.globe.min'
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
@@ -11,7 +11,10 @@ const HomePage = () => {
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(BIRDS({
-        el: myRef.current
+        el: myRef.current,
+        backgroundColor: 0xe0e0ef,
+        color: 0x5c5cde,
+        color2: 0x76768b
       }))
     }
     return () => {
@@ -19,63 +22,60 @@ const HomePage = () => {
     }
   }, [vantaEffect])
 
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y:0
-  });
-  const [cursorVariant, setCursorVariant] = useState("default")
+  // const [mousePosition, setMousePosition] = useState({
+  //   x: 0,
+  //   y:0
+  // });
+  // const [cursorVariant, setCursorVariant] = useState("default")
 
 
-  useEffect(() => {
-    const mouseMove = e => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY
-      })
-    }
+  // useEffect(() => {
+  //   const mouseMove = e => {
+  //     setMousePosition({
+  //       x: e.clientX,
+  //       y: e.clientY
+  //     })
+  //   }
 
-    window.addEventListener("mousemove", mouseMove);
+  //   window.addEventListener("mousemove", mouseMove);
 
-    return()=>{
-      window.removeEventListener("mousemove",mouseMove);
-    }
+  //   return()=>{
+  //     window.removeEventListener("mousemove",mouseMove);
+  //   }
 
-  }, []);
+  // }, []);
 
-  const variants = {
-    default:{
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16
-    },
-    text:{
-      height: 150,
-      width: 150,
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
-      backgroundColor: "rgb(140, 194, 184)",
-      // mixBlendMode: "difference"
-    }
-  }
+  // const variants = {
+  //   default:{
+  //     x: mousePosition.x - 16,
+  //     y: mousePosition.y - 16
+  //   },
+  //   text:{
+  //     height: 150,
+  //     width: 150,
+  //     x: mousePosition.x - 75,
+  //     y: mousePosition.y - 75,
+  //     backgroundColor: "rgb(140, 194, 184)",
+  //     // mixBlendMode: "difference"
+  //   }
+  // }
 
-  const textEnter = () => setCursorVariant("text");
-  const textLeave = () => setCursorVariant("default");
+  // const textEnter = () => setCursorVariant("text");
+  // const textLeave = () => setCursorVariant("default");
   
 
 
   return (
     <div className="home-page" ref={myRef}>
       <Navbar/>
-      <motion.div className="cursor"
-      variants={variants}
-      animate={cursorVariant}
-      />
+      
       <div className="content">
-        <p onMouseEnter={textEnter} onMouseLeave={textLeave} className="main-title">
+        <p   className="main-title">
           Streamline
           <br /> Your Legal Processes
         </p>
         {/* <p className="sub-heading">Effortless Document Management</p> */}
-        <p onMouseEnter={textEnter} onMouseLeave={textLeave} className="description">
+        <p   className="description">
           Effortlessly generate, customize, and manage a wide range of legal
           documents tailored to your specific needs.
         </p>
