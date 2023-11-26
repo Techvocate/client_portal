@@ -1,8 +1,27 @@
 import { Link } from 'react-router-dom';
 import './Signup.css'
-import { useState } from 'react';
+import {useEffect, useRef,useContext, useState} from "react";
+import BIRDS from 'vanta/dist/vanta.waves.min';
 
-export default function Signup(){
+const Signup = () => {
+
+  const [vantaEffect, setVantaEffect] = useState(null)
+  const myRef = useRef(null)
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(BIRDS({
+        el: myRef.current,
+        color: 0x0,
+        shininess: 120,
+        waveHeight: 19,
+        waveSpeed: 0.8,
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   async function register(ev) {
@@ -20,7 +39,7 @@ export default function Signup(){
   }
 
     return(
-        <div class="signup-container">
+        <div class="signup-container" ref={myRef}>
         <div class="form-container">
           <h2>Sign Up</h2>
           <form  onSubmit={register}> 
@@ -43,3 +62,5 @@ export default function Signup(){
       
     );
 }
+
+export default Signup;

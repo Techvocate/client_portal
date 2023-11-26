@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #C4DFDF; /* Background color for the whole page */
+  /* background-color: #C4DFDF; Background color for the whole page */
 }
 
 .form-container {
@@ -14,13 +14,14 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 50px;
-  background-color: #ffffff; /* Background color for the form */
+  background-color: #ffffff00; /* Background color for the form */
+  backdrop-filter: blur(4px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
 
 h2 {
   margin: 0;
-  color: #333; /* Text color for the heading */
+  color: #ffffff; /* Text color for the heading */
 }
 
 input[type="text"],
@@ -50,7 +51,7 @@ input[type="password"],
   margin-top: 10px;
   text-align: center;
   font-size: 14px;
-  color: #666; /* Text color for the sign-up link */
+  color: #ffffff; /* Text color for the sign-up link */
 }
 
 .signup-link a {
