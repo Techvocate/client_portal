@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './QueryMain.css';
 import sendBtn from '../assets/send.svg';
 import userIcon from '../assets/user.jpg';
-import gptImgLogo from '../assets/integrity.png';
+import gptImgLogo from '../assets/integrity2.png';
 import keep from '../assets/keep.png';
 import Lottie from 'lottie-react';
 import lottie1 from '../assets/lottie1.json';

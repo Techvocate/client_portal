@@ -4,6 +4,8 @@ import BIRDS from 'vanta/dist/vanta.globe.min'
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import { useContext} from 'react';
+import {UserContext} from "../UserContext";
 
 const HomePage = () => {
   const [vantaEffect, setVantaEffect] = useState(null)
@@ -21,6 +23,16 @@ const HomePage = () => {
       if (vantaEffect) vantaEffect.destroy()
     }
   }, [vantaEffect])
+  const {setUserInfo,userInfo} = useContext(UserContext);
+  useEffect(() => {
+    fetch('http://localhost:4000/profile', {
+      credentials: 'include',
+    }).then(response => {
+      response.json().then(userInfo => {
+        setUserInfo(userInfo);
+      });
+    });
+  }, []);
 
   // const [mousePosition, setMousePosition] = useState({
   //   x: 0,
@@ -65,6 +77,8 @@ const HomePage = () => {
   
 
 
+  const username = userInfo?.username;
+
   return (
     <div className="home-page" ref={myRef}>
       <Navbar/>
@@ -85,11 +99,14 @@ const HomePage = () => {
           transition={{ duration: 0.5, type: "tween" }}
           className="app__profile-item"
         >
-          <Link to="/querypage">
+          {username && <Link to="/querypage">
             <button className="try-now-button">
               Try Now <span style={{ fontSize: "20px" }}>→</span>
             </button>
-          </Link>
+          </Link>}
+          {!username && <Link to="/login"> <button className="try-now-button">
+              Try Now <span style={{ fontSize: "20px" }}>→</span>
+            </button></Link> }
         </motion.div>
       </div>
       {/* <video autoPlay loop muted className="video-bg">
