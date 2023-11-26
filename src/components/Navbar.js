@@ -43,25 +43,21 @@ const Navbar = () => {
         
         
         { !username && <div className="navbar-auth">
-          <Link><button className="auth-button">Login</button></Link>
+          <Link to={'/login'}><button className="auth-button">Login</button></Link>
           <Link to={'/signup'}><button className="auth-button">Signup</button></Link>
         </div>}
-        {username && <div className="navbar-auth">
-          <Link to={'/profile'}><button className="auth-button">{username}</button></Link>
-          <button className="auth-button" onClick={logout}>Logout</button>
-        </div>} 
          {username && (
           <div className='navbar-auth'>
               <div>{username}</div>
               <div><Link className='auth-button' onClick={logout}>Logout</Link></div>
           </div>
         )}
-        {!username && (
+        {/* {!username && (
           <div className='navbar-auth'>
             <div eventKey={2}><Link className='auth-button' to={'/login'}>Login</Link></div>
             <div eventKey={2}><Link className='auth-button' to={'/signup'}>Signup</Link></div>
           </div>
-        )} 
+        )}  */}
       </div>
     </nav>
   );
