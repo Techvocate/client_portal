@@ -41,7 +41,7 @@
   list-style: none;
   padding: 0;
   display: flex;
-  margin-right: 30%;
+  margin-right: 20%;
   gap: 20px;
   /* color: #E5D283; */
   font-size: larger;
@@ -75,12 +75,13 @@
 }
 
 .auth-button {
-  /* background-color: rgba(0, 0, 0, 0.4);  */
-  color: black;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.4); 
+  color: rgb(251, 249, 249);
   border: none;
   border-radius: 8px;
   padding: 0.5rem 1rem;
-  font-size: 24px;
+  font-size: 16px;
   cursor: pointer;
   margin-left: 1rem;
   backdrop-filter: blur(4px);
@@ -91,6 +92,10 @@
 }
 
 .auth-button:hover {
-  color: rgb(26, 143, 84); 
+  color: rgb(86, 100, 193); 
   transition: all 0.4s ease-in-out;
+  }
+
+  .losign{
+    margin: 40px;
   }
