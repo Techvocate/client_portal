@@ -99,7 +99,7 @@ const HomePage = () => {
           transition={{ duration: 0.5, type: "tween" }}
           className="app__profile-item"
         >
-          {username && <Link to="/querypage">
+          {username && <Link to="/querypage" >
             <button className="try-now-button">
               Try Now <span style={{ fontSize: "20px" }}>→</span>
             </button>

@@ -34,8 +34,8 @@ const Navbar = () => {
             <p id='title'>LegalEase</p>
         </div>
         <ul className="navbar-links">
-          <Link to={'/'}><li className="navbar-link">Home</li></Link>
-          <Link to={'/legaladvice'}><li className="navbar-link">Legal Advice</li></Link>
+          <Link to={'/'} style={{textDecoration: 'none'}}><li className="navbar-link">Home</li></Link>
+          <Link to={'/legaladvice'} style={{textDecoration: 'none'}}><li className="navbar-link">Legal Advice</li></Link>
           <li className="navbar-link">About</li>
           
           {/* <li className="navbar-link">UseCases</li> */}

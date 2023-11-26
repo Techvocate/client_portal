@@ -46,6 +46,7 @@
     margin: 0 auto;
     margin-bottom: 2rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 .query{
     display: flex;

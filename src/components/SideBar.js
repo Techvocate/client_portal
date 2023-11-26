@@ -14,19 +14,19 @@ const SideBar = () => {
         <div className='upperSide'>
             <div className='upperSideTop'>
                 <img src={gptlogo} alt='logo' className='logo'/>
-                <Link to={'/'}><span className='brand'>LegalEase</span></Link>
+                <Link to={'/'} style={{textDecoration: 'none'}}><span className='brand'>LegalEase</span></Link>
             </div>
             <button className='midBtn'><img src={addBtn} alt='' className='addBtn'/>New Chat</button>
-            <div className='upperSideBottom'>
+            {/* <div className='upperSideBottom'>
                 <button className='query'><img src={msgIcon} alt='Query'/>What is LegalEase</button>
                 <button className='query'><img src={msgIcon} alt='Query'/>What is LegalEase</button>
                 <button className='query'><img src={msgIcon} alt='Query'/>What is LegalEase</button>
                 <button className='query'><img src={msgIcon} alt='Query'/>What is LegalEase</button>
-            </div>
+            </div> */}
         </div>
         <div className='lowerside'>
           <div className='lowerSide'>
-            <Link to="/" >
+            <Link to="/" style={{textDecoration: 'none'}}>
             <div className='listItems'><img src={home} alt='' className='listitemsImg'/>Home</div>
             </Link>
             <div className='listItems'><img src={saved} alt='' className='listitemsImg'/>Downloads</div>

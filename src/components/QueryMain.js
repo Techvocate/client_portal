@@ -17,38 +17,32 @@ function QueryMain() {
     setInputQuery(e.target.value);
   };
 
-  const handleQuerySubmit = async () => { 
+  const handleQuerySubmit = async () => {
     setLoading(true);
-    setTimeout(async () => {
-      if 
-      (inputquery.trim() === Response.query) {
-        const predefinedResponse = Response.response;
-        const newChats = [...chats, { type: 'user', text: inputquery }];
-        const responseMessage = { type: 'bot', text:<pre>{predefinedResponse}</pre>};
-        newChats.push(responseMessage);
-        setChats(newChats);
-        setInputQuery('');
-      } else {
-        const response = await fetch('http://18.236.83.68:5000/input', {
-          method: 'POST',
-          body: JSON.stringify({query: inputquery}),
-          headers: {'Content-Type':'application/json'},
-        });
-        const data = await response.json();
-        const responseText = data.response.response;
+    const response = await fetch('https://api.openai.com/v1/engines/text-davinci-003/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer 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`
+      },
+      body: JSON.stringify({
+        prompt: inputquery,
+        max_tokens: 2000
+      })
+    });
+    console.log(response)
+    const data = await response.json();
+    const responseText = data.choices[0].text.trim();
   
-        if (inputquery.trim() === '') return;
+    const newChats = [...chats, { type: 'user', text: inputquery }];
+    const responseMessage = { type: 'bot', text:<pre>{responseText}</pre>};
+    newChats.push(responseMessage);
   
-        const newChats = [...chats, { type: 'user', text: inputquery }];
-        const responseMessage = { type: 'bot', text:<pre>{responseText}</pre>};
-        newChats.push(responseMessage);
-  
-        setChats(newChats);
-        setInputQuery('');
-      }
-      setLoading(false);
-    }, 18000); 
+    setChats(newChats);
+    setInputQuery('');
+    setLoading(false);
   };
+  
   
 
   function handleeditbutton() {
@@ -62,13 +56,14 @@ function QueryMain() {
 
   return (
     <div className='main'>
+      
       <div className='chats'>
         {chats.map((chat, index) => (
           <div key={index} className={`chat1 ${chat.type === 'bot' ? 'bot' : ''}`}>
             <img className='chatImg' src={chat.type === 'user' ? userIcon : gptImgLogo} alt='' />
-             {loading && (
+             {/* {loading && (
               <Lottie animationData = {lottie1}/>
-            )}
+            )} */}
             {!loading && (
               <>
                 <p className='txt'>{chat.text}</p>
@@ -92,7 +87,7 @@ function QueryMain() {
             <img src={sendBtn} alt='send' />
           </button>
         </div>
-        <p style={{ color: 'black' }}>LeagalEase A Revolution in legal industries.</p>
+        <p style={{ color: 'white' }}>LeagalEase A Revolution in legal industries.</p>
       </div>
     </div>
   );
