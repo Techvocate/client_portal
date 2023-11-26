@@ -16,11 +16,13 @@ const EditSide = () => {
                 <img src={gptlogo} alt='logo' className='logo'/>
                 <span className='brand'>LegalEase</span>
             </div>
+            <Link to="/querypage" style={{textDecoration: 'none'}}>
             <button className='midBtn'><img src={addBtn} alt='' className='addBtn'/>New Chat</button>
+            </Link>
         </div>
         <div className='lowerside'>
           <div className='lowerSide'>
-            <Link to="/" >
+            <Link to="/" style={{textDecoration: 'none'}}>
             <div className='listItems'><img src={home} alt='' className='listitemsImg'/>Home</div>
             </Link>
             <div className='listItems'><img src={saved} alt='' className='listitemsImg'/>Downloads</div>

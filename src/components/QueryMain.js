@@ -62,6 +62,7 @@ function QueryMain() {
 
   return (
     <div className='main'>
+      
       <div className='chats'>
         {chats.map((chat, index) => (
           <div key={index} className={`chat1 ${chat.type === 'bot' ? 'bot' : ''}`}>
@@ -92,7 +93,7 @@ function QueryMain() {
             <img src={sendBtn} alt='send' />
           </button>
         </div>
-        <p style={{ color: 'black' }}>LeagalEase A Revolution in legal industries.</p>
+        <p style={{ color: 'white' }}>LeagalEase A Revolution in legal industries.</p>
       </div>
     </div>
   );

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './Edit_Query.css';
 import sendBtn from '../../assets/send.svg';
 import userIcon from '../../assets/user.jpg';
-import gptImgLogo from '../../assets/integrity.png';
+import gptImgLogo from '../../assets/integrity2.png';
 import keep from '../../assets/keep.png';
+
 
 function Edit_Query() {
   const [isEditing, setIsEditing] = useState(true);
@@ -85,6 +86,15 @@ function Edit_Query() {
     setText(e.target.value);
   }
 
+  const downloadTxtFile = () => {
+    const element = document.createElement('a');
+    const file = new Blob([text], { type: 'text/plain' });
+    element.href = URL.createObjectURL(file);
+    element.download = 'edited_document.txt';
+    document.body.appendChild(element);
+    element.click();
+  };
+
   return (
     <div className='main1'>
       <div className='chats1'>
@@ -110,7 +120,7 @@ function Edit_Query() {
           <button className='edit_save' onClick={handleEditClick}>Edit</button>}
         </div>
       </div>
-      <button className='downloadBtn'>Download</button>
+      <button className='downloadBtn' onClick={downloadTxtFile}>Download</button>
     </div>
   )
 }
