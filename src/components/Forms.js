@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Forms.css'
 
-const Forms = () => {
+const Forms = ({ updateFormValues }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [formValues, setFormValues] = useState({
     agreementType: '',
@@ -47,27 +47,41 @@ const Forms = () => {
       setFormValues({ ...formValues, partner1Name: name1, partner2Name: name2 });
     }
     setCurrentStep(currentStep + 1);
+    updateFormValues({
+      ...formValues,
+      landlordName: name1,
+      // ... other form fields if needed
+    });
+
   };
 
   const handleRentDetailsSubmit = (amount, duration, location) => {
     setFormValues({
       ...formValues,
       rentDetails: {
-        amount,
-        duration,
-        location,
+        amount:amount,
+        duration:duration,
+        location:location,
       },
     });
     setCurrentStep(currentStep + 1);
+    updateFormValues({
+      ...formValues,
+      rentDetails: {
+        amount:amount,
+        duration:duration,
+        location:location,
+      },
+    });
   };
 
   const handleBusinessDetailsSubmit = (partners, initialDuration, paymentPolicy) => {
     setFormValues({
       ...formValues,
       businessDetails: {
-        partners,
-        initialDuration,
-        paymentPolicy,
+        partners:partners,
+        initialDuration:initialDuration,
+        paymentPolicy:paymentPolicy,
       },
     });
   };

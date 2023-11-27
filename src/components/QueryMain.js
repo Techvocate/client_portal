@@ -14,27 +14,57 @@ function QueryMain() {
   const [chats, setChats] = useState([]);
   const [loading, setLoading] = useState(false);
   const [formsactive,setformsactive] = useState(true);
+  const [formData, setFormData] = useState({
+    // agreementType: '',
+    landlordName: '',
+    tenantName: '',
+    // partner1Name: '',
+    // partner2Name: '',
+    // sellerName: '',
+    // buyerName: '',
+    rentDetails: {
+      amount: '',
+      duration: '',
+      location: '',
+    },
+    // businessDetails: {
+    //   partners: '',
+    //   initialDuration: '',
+    //   paymentPolicy: '',
+    // },
+    // agreementSale: {
+    //     propertyDetails: '',
+    //     propertyDimensions: '',
+    //     propertyAmount: '',
+    //     legalIssues: '',
+    //   },
+    // SaleAgreement: {
+    //     propertyDetails: '',
+    //     propertyDimensions: '',
+    //     propertyAmount: '',
+    //     legalIssues: '',
+    //   },
+  });
 
   const handleQueryChange = (e) => {
-    setInputQuery(e.target.value);
+    setInputQuery(`Draft a lease agreement between ${formData.landlordName} and ${formData.tenantName}, for a residential property located in ${formData.rentDetails.location}, for minimum duration of ${formData.rentDetails.duration} at the rent of ${formData.rentDetails.amount}.`)
   };
 
   const handleQuerySubmit = async () => { 
     setLoading(true);
-    const response = await fetch('https://api.openai.com/v1/engines/text-davinci-003/completions', {
+    const response = await fetch('http://192.168.232.253:5000/input', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        prompt: inputquery,
-        max_tokens: 2000
-      })
+        query: inputquery
+    })
     });
     console.log(response)
     const data = await response.json();
-    const responseText = data.choices[0].text.trim();
-  
+    const responseText = data;
+    console.log(data.response.response)
     const newChats = [...chats, { type: 'user', text: inputquery }];
     const responseMessage = { type: 'bot', text:<pre>{responseText}</pre>};
     newChats.push(responseMessage);
@@ -58,12 +88,15 @@ function QueryMain() {
   function handleforms(){
     setformsactive(!formsactive)
   }
+  const updateFormValues = (newFormValues) => {
+    setFormData(newFormValues);
+  };
 
   return (
     <div className='main'>
       <div className='chats'>
       <button onClick={handleforms}>Forms</button>
-      {formsactive && <Forms/>}
+      {formsactive && <Forms updateFormValues={updateFormValues}/>}
         {chats.map((chat, index) => (
           <div key={index} className={`chat1 ${chat.type === 'bot' ? 'bot' : ''}`}>
             <img className='chatImg' src={chat.type === 'user' ? userIcon : gptImgLogo} alt='' />
