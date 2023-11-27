@@ -7,17 +7,19 @@ import keep from '../assets/keep.png';
 import Lottie from 'lottie-react';
 import lottie1 from '../assets/lottie1.json';
 import Response from './register/Response';
+import Forms from './Forms';
 
 function QueryMain() {
   const [inputquery, setInputQuery] = useState('');
   const [chats, setChats] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [formsactive,setformsactive] = useState(true);
 
   const handleQueryChange = (e) => {
     setInputQuery(e.target.value);
   };
 
-  const handleQuerySubmit = async () => {
+  const handleQuerySubmit = async () => { 
     setLoading(true);
     const response = await fetch('https://api.openai.com/v1/engines/text-davinci-003/completions', {
       method: 'POST',
@@ -56,7 +58,6 @@ function QueryMain() {
 
   return (
     <div className='main'>
-      
       <div className='chats'>
         {chats.map((chat, index) => (
           <div key={index} className={`chat1 ${chat.type === 'bot' ? 'bot' : ''}`}>
