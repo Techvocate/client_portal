@@ -7,16 +7,21 @@ import keep from '../assets/keep.png';
 import Lottie from 'lottie-react';
 import lottie1 from '../assets/lottie1.json';
 import Response from './register/Response';
+import Forms from './Forms';
 
 function QueryMain() {
   const [inputquery, setInputQuery] = useState('');
   const [chats, setChats] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [formsactive,setformsactive] = useState(true);
 
   const handleQueryChange = (e) => {
     setInputQuery(e.target.value);
   };
 
+  function handleforms(){
+    setformsactive(!formsactive);
+  }
   const handleQuerySubmit = async () => { 
     setLoading(true);
     setTimeout(async () => {
@@ -62,7 +67,8 @@ function QueryMain() {
 
   return (
     <div className='main'>
-      
+      <button onClick={handleforms}>Forms</button>
+      {formsactive && <Forms/>}
       <div className='chats'>
         {chats.map((chat, index) => (
           <div key={index} className={`chat1 ${chat.type === 'bot' ? 'bot' : ''}`}>
