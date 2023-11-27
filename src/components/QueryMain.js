@@ -25,7 +25,6 @@ function QueryMain() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        // 'Authorization': `Bearer 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`
       },
       body: JSON.stringify({
         prompt: inputquery,
