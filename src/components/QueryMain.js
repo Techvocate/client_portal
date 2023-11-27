@@ -61,9 +61,9 @@ function QueryMain() {
 
   return (
     <div className='main'>
+      <div className='chats'>
       <button onClick={handleforms}>Forms</button>
       {formsactive && <Forms/>}
-      <div className='chats'>
         {chats.map((chat, index) => (
           <div key={index} className={`chat1 ${chat.type === 'bot' ? 'bot' : ''}`}>
             <img className='chatImg' src={chat.type === 'user' ? userIcon : gptImgLogo} alt='' />

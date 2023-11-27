@@ -313,7 +313,7 @@ const Forms = () => {
         </button>
       </>
     )}
-    <button
+    {(formValues.agreementType === 'Rent Agreement' || formValues.agreementType === 'Business Agreement') &&<button
       onClick={() =>
         formValues.agreementType === 'Rent Agreement'
           ? handleRentDetailsSubmit(formValues.rentDetails.amount, formValues.rentDetails.duration, formValues.rentDetails.location)
@@ -321,7 +321,7 @@ const Forms = () => {
       }
     >
       Submit
-    </button>
+    </button>}
   </div>
 )}
       </div>
