@@ -109,7 +109,7 @@ const Forms = () => {
             <button onClick={() => handleOptionSelect('Business Agreement')}>Business Agreement</button>
             <button onClick={() => handleOptionSelect('Agreement to Sale')}>Agreement to Sale</button>
             <button onClick={() => handleOptionSelect('Sale Agreement')}>Sale Agreement</button>
-            {/* Add buttons for other options */}
+
         </div>
         )}
         {currentStep === 1 && (

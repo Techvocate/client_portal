@@ -56,8 +56,14 @@ function QueryMain() {
     }
   }
 
+  function handleforms(){
+    setformsactive(!formsactive)
+  }
+
   return (
     <div className='main'>
+      <button onClick={handleforms}>Forms</button>
+      {formsactive && <Forms/>}
       <div className='chats'>
         {chats.map((chat, index) => (
           <div key={index} className={`chat1 ${chat.type === 'bot' ? 'bot' : ''}`}>
