@@ -102,7 +102,6 @@ const Forms = () => {
     <div className='main'>
       <div className='forms'>
         {currentStep === 0 && (
-        /* Render the first form with options */
         <div>
             <p>Select Agreement Type:</p>
             <button onClick={() => handleOptionSelect('Rent Agreement')}>Rent Agreement</button>
