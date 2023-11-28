@@ -123,6 +123,7 @@
     align-items: center;
     border-radius: 1rem;
     width: 45rem;
+    margin-right: 140px;
 }
 .inp>input{
     width: calc(100% - 3rem);
@@ -147,3 +148,19 @@ pre {
     overflow-x: auto;
   }
   
+  .formsButton {
+    position: absolute;
+    margin-bottom: 42px;
+    margin-right: 100px;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    background-color: #C4DFDF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }

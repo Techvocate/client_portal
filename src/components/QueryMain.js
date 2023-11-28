@@ -49,6 +49,7 @@ function QueryMain() {
   const handleQueryChange = (e) => {
     setInputQuery(`Draft a lease agreement between ${formData.landlordName} and ${formData.tenantName}, for a residential property located in ${formData.rentDetails.location}, for minimum duration of ${formData.rentDetails.duration} at the rent of ${formData.rentDetails.amount}.`)
   };
+  console.log(inputquery)
 
   const handleQuerySubmit = async () => { 
     setLoading(true);
@@ -95,8 +96,10 @@ function QueryMain() {
   return (
     <div className='main'>
       <div className='chats'>
-      <button onClick={handleforms}>Forms</button>
+      {/* <div className='form'> */}
+      <button onClick={handleforms} className='formsButton'>Forms</button>
       {formsactive && <Forms updateFormValues={updateFormValues}/>}
+      {/* </div> */}
         {chats.map((chat, index) => (
           <div key={index} className={`chat1 ${chat.type === 'bot' ? 'bot' : ''}`}>
             <img className='chatImg' src={chat.type === 'user' ? userIcon : gptImgLogo} alt='' />
@@ -126,7 +129,7 @@ function QueryMain() {
             <img src={sendBtn} alt='send' />
           </button>
         </div>
-        <p style={{ color: 'white' }}>LeagalEase A Revolution in legal industries.</p>
+        <p style={{ color: 'white', marginRight:'85px' }}>LeagalEase A Revolution in legal industries.</p>
       </div>
     </div>
   );
