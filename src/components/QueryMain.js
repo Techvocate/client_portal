@@ -61,10 +61,9 @@ function QueryMain() {
         query: inputquery
     })
     });
-    console.log(response)
-    const data = await response.json();
-    const responseText = data;
-    console.log(data.response.response)
+    const responseData = await response.json();
+    const responseText = JSON.stringify(responseData.response.source_nodes[0].node.text);
+    
     const newChats = [...chats, { type: 'user', text: inputquery }];
     const responseMessage = { type: 'bot', text:<pre>{responseText}</pre>};
     newChats.push(responseMessage);
@@ -105,7 +104,19 @@ function QueryMain() {
             )} */}
             {!loading && (
               <>
+                {typeof chat.text === 'string' ? (
                 <p className='txt'>{chat.text}</p>
+              ) : (
+                <div className='response-container'>
+                  {/* Split the chat text and render with line breaks */}
+                  {chat.text.props.children.split('\n').map((line, i) => (
+                    <React.Fragment key={i}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </div>
+              )}
                 {chat.type === 'bot' && (
                   <div className='edit__div'>
                     <img className='chatImg1' src={keep} alt='' />
