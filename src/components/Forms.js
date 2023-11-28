@@ -157,7 +157,7 @@ const Forms = ({ updateFormValues }) => {
           <div>
             {formValues.agreementType === "Rent Agreement" && (
               <>
-                <p>Landlord Name:</p>
+                <p className="para">Landlord Name:</p>
                 <input
                   type="text"
                   value={formValues.landlordName}
@@ -168,7 +168,7 @@ const Forms = ({ updateFormValues }) => {
                     })
                   }
                 />
-                <p>Tenant Name:</p>
+                <p className="para">Tenant Name:</p>
                 <input
                   type="text"
                   value={formValues.tenantName}
@@ -180,7 +180,7 @@ const Forms = ({ updateFormValues }) => {
             )}
             {formValues.agreementType === "Business Agreement" && (
               <>
-                <p>Partner 1 Name:</p>
+                <p className="para">Partner 1 Name:</p>
                 <input
                   type="text"
                   value={formValues.partner1Name}
@@ -191,7 +191,7 @@ const Forms = ({ updateFormValues }) => {
                     })
                   }
                 />
-                <p>Partner 2 Name:</p>
+                <p className="para">Partner 2 Name:</p>
                 <input
                   type="text"
                   value={formValues.partner2Name}
@@ -206,7 +206,7 @@ const Forms = ({ updateFormValues }) => {
             )}
             {formValues.agreementType === "Agreement to Sale" && (
               <>
-                <p>Seller Name:</p>
+                <p className="para">Seller Name:</p>
                 <input
                   type="text"
                   value={formValues.sellerName}
@@ -214,7 +214,7 @@ const Forms = ({ updateFormValues }) => {
                     setFormValues({ ...formValues, sellerName: e.target.value })
                   }
                 />
-                <p>Buyer Name:</p>
+                <p className="para">Buyer Name:</p>
                 <input
                   type="text"
                   value={formValues.buyerName}
@@ -226,7 +226,7 @@ const Forms = ({ updateFormValues }) => {
             )}
             {formValues.agreementType === "Sale Agreement" && (
               <>
-                <p>Seller Name:</p>
+                <p className="para">Seller Name:</p>
                 <input
                   type="text"
                   value={formValues.sellerName}
@@ -234,7 +234,7 @@ const Forms = ({ updateFormValues }) => {
                     setFormValues({ ...formValues, sellerName: e.target.value })
                   }
                 />
-                <p>Buyer Name:</p>
+                <p className="para">Buyer Name:</p>
                 <input
                   type="text"
                   value={formValues.buyerName}
@@ -263,7 +263,7 @@ const Forms = ({ updateFormValues }) => {
           <div>
             {formValues.agreementType === "Rent Agreement" && (
               <>
-                <p>Rent Amount:</p>
+                <p className="para">Rent Amount:</p>
                 <input
                   type="text"
                   value={formValues.rentDetails.amount}
@@ -277,7 +277,7 @@ const Forms = ({ updateFormValues }) => {
                     })
                   }
                 />
-                <p>Duration:</p>
+                <p className="para">Duration:</p>
                 <input
                   type="text"
                   value={formValues.rentDetails.duration}
@@ -291,7 +291,7 @@ const Forms = ({ updateFormValues }) => {
                     })
                   }
                 />
-                <p>Location:</p>
+                <p className="para">Location:</p>
                 <input
                   type="text"
                   value={formValues.rentDetails.location}
@@ -309,7 +309,7 @@ const Forms = ({ updateFormValues }) => {
             )}
             {formValues.agreementType === "Business Agreement" && (
               <>
-                <p>Business Details (50 words):</p>
+                <p className="para">Business Details (50 words):</p>
                 <textarea
                   value={formValues.businessDetails.details}
                   onChange={(e) =>
@@ -325,7 +325,7 @@ const Forms = ({ updateFormValues }) => {
                   cols={50}
                   maxLength={50}
                 />
-                <p>Initial Duration of Business:</p>
+                <p className="para">Initial Duration of Business:</p>
                 <input
                   type="text"
                   value={formValues.businessDetails.initialDuration}
@@ -339,7 +339,7 @@ const Forms = ({ updateFormValues }) => {
                     })
                   }
                 />
-                <p>Payment Policy:</p>
+                <p className="para">Payment Policy:</p>
                 <input
                   type="text"
                   value={formValues.businessDetails.paymentPolicy}
@@ -357,7 +357,7 @@ const Forms = ({ updateFormValues }) => {
             )}
             {formValues.agreementType === "Agreement to Sale" && (
               <>
-                <p>Property Details:</p>
+                <p className="para">Property Details:</p>
                 <textarea
                   value={formValues.agreementSale.propertyDetails}
                   onChange={(e) =>
@@ -373,7 +373,7 @@ const Forms = ({ updateFormValues }) => {
                   cols={50}
                   maxLength={50}
                 />
-                <p>Property Dimensions:</p>
+                <p className="para">Property Dimensions:</p>
                 <input
                   type="text"
                   value={formValues.agreementSale.propertyDimensions}
@@ -387,7 +387,7 @@ const Forms = ({ updateFormValues }) => {
                     })
                   }
                 />
-                <p>Property Amount:</p>
+                <p className="para">Property Amount:</p>
                 <input
                   type="text"
                   value={formValues.agreementSale.propertyAmount}
@@ -401,7 +401,7 @@ const Forms = ({ updateFormValues }) => {
                     })
                   }
                 />
-                <p>Legal Issues with Property:</p>
+                <p className="para">Legal Issues with Property:</p>
                 <input
                   type="text"
                   value={formValues.agreementSale.legalIssues}
@@ -431,7 +431,7 @@ const Forms = ({ updateFormValues }) => {
             )}
             {formValues.agreementType === "Sale Agreement" && (
               <>
-                <p>Property Details:</p>
+                <p className="para">Property Details:</p>
                 <textarea
                   value={formValues.SaleAgreement.propertyDetails}
                   onChange={(e) =>
@@ -447,7 +447,7 @@ const Forms = ({ updateFormValues }) => {
                   cols={50}
                   maxLength={50}
                 />
-                <p>Property Dimensions:</p>
+                <p className="para">Property Dimensions:</p>
                 <input
                   type="text"
                   value={formValues.SaleAgreement.propertyDimensions}
@@ -461,7 +461,7 @@ const Forms = ({ updateFormValues }) => {
                     })
                   }
                 />
-                <p>Property Amount:</p>
+                <p className="para">Property Amount:</p>
                 <input
                   type="text"
                   value={formValues.SaleAgreement.propertyAmount}
@@ -475,7 +475,7 @@ const Forms = ({ updateFormValues }) => {
                     })
                   }
                 />
-                <p>Legal Issues with Property:</p>
+                <p className="para">Legal Issues with Property:</p>
                 <input
                   type="text"
                   value={formValues.SaleAgreement.legalIssues}

@@ -53,7 +53,7 @@ function QueryMain() {
 
   const handleQuerySubmit = async () => { 
     setLoading(true);
-    const response = await fetch('http://192.168.232.253:5000/input', {
+    const response = await fetch('http://192.168.132.110:5000/input', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ function QueryMain() {
     })
     });
     const responseData = await response.json();
-    const responseText = JSON.stringify(responseData.response.source_nodes[0].node.text);
+    const responseText = (responseData.response.source_nodes[0].node.text);
     
     const newChats = [...chats, { type: 'user', text: inputquery }];
     const responseMessage = { type: 'bot', text:<pre>{responseText}</pre>};
@@ -102,16 +102,16 @@ function QueryMain() {
         {chats.map((chat, index) => (
           <div key={index} className={`chat1 ${chat.type === 'bot' ? 'bot' : ''}`}>
             <img className='chatImg' src={chat.type === 'user' ? userIcon : gptImgLogo} alt='' />
-             {/* {loading && (
+             {loading && (
               <Lottie animationData = {lottie1}/>
-            )} */}
+            )}
             {!loading && (
               <>
-                {typeof chat.text === 'string' ? (
+                {/* {typeof chat.text === 'string' ? (
                 <p className='txt'>{chat.text}</p>
               ) : (
                 <div className='response-container'>
-                  {/* Split the chat text and render with line breaks */}
+                  Split the chat text and render with line breaks
                   {chat.text.props.children.split('\n').map((line, i) => (
                     <React.Fragment key={i}>
                       {line}
@@ -119,7 +119,8 @@ function QueryMain() {
                     </React.Fragment>
                   ))}
                 </div>
-              )}
+              )} */}
+              <p className='txt'>{chat.text}</p>
                 {chat.type === 'bot' && (
                   <div className='edit__div'>
                     <img className='chatImg1' src={keep} alt='' />
